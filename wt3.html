@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="wt1.css" />
+<title>Chatbot Javascript </title>
+<!-- <link rel="stylesheet" href="wt1.css" /> -->
+</head>
+<body>
+    <script>function talk() {
+        var know = {
+            "How was the college": "Good and the college placement was also good ",
+            "What was the placement percent": " 95%",
+            "What can i do for you": "Search CodeWithRandom on Google>>Thank Me Later",
+            "Your followers":
+                "I have my family of 200000 members, i don't have follower ,have supportive Famiy ",
+            ok: "Thank You So Much ",
+            Bye: "Okay! Will meet soon..",
+        };
+        var user = document.getElementById("userBox").value;
+        document.getElementById("chatLog").innerHTML = user + "<br>";
+        if (user in know) {
+            document.getElementById("chatLog").innerHTML = know[user] + "<br>";
+        } else {
+            document.getElementById("chatLog").innerHTML =
+                "Sorry,I didn't understand <br>";
+        }
+    }
+    </script>
+<div class="glass">
+<h1>Ask Your Question??</h1>
+<h2>Yeah,ask Some Question</h2>
+<div class="input">
+<input
+type="text"
+id="userBox"
+onkeydown="if(event.keyCode == 13){ talk()}"
+placeholder="Type your Question"
+/>
+</div>
+<p id="chatLog">Answer Appering Hear</p>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
